@@ -1,0 +1,20 @@
+<template name="news_list">
+    <block wx:for="{{news}}" >
+        <view bindtap="newsDetail" data-newsurl="{{item.url}}" class="item">
+            <view class="left">
+                <view class="title">
+                    {{item.title}}
+                </view>
+                <view class="sub_title">
+                        <!-- <text>[{{item.realtype}}] {{item.date}}</text> -->
+                   
+                        <text>[{{item.category}}] {{item.date}}</text>
+                </view>
+            </view>
+            <view class="right">
+                <image src="{{item.thumbnail_pic_s03}}"/>
+            </view>
+            <view style="clear:both"></view>
+        </view>
+    </block>
+</template>

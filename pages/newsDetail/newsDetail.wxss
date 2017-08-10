@@ -1,0 +1,41 @@
+@import "../../wxParse/wxParse.wxss";
+.wrapper{
+  background-color:gainsboro;
+  font-family: "微软雅黑";
+}
+.arrow{
+  font-size: 20px;
+  line-height: 20px;
+  display: inline-block;
+  margin: 0 25px;
+  width:17px;
+}
+.arrow:first-of-type{
+  float: left;
+  margin: 15px 25px;
+}
+.arrow:last-of-type{
+  float:right;
+  margin: 15px 25px;
+}
+.clear{
+  clear: both;
+}
+.userinfo{
+  margin-left: 0;
+  margin-top: 0;
+}
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.username{
+  color:blue;
+  font-family: "微软雅黑";
+  vertical-align: middle;
+  margin-top: -42px;
+  display: inline-block;
+}

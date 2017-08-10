@@ -1,0 +1,55 @@
+<view class="wrapper">
+  <view class="head">
+     <view class="userinfo">
+        <label bindtap="backPage" class="icon fa-arrow-left arrow"></label>
+        <image bindtap="chooseHead" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <label class="username">欢迎您，{{userInfo.nickName}}</label>
+        <label bindtap="newsPage" class="icon fa-newspaper-o arrow"></label>
+      </view>
+      <view class="clear"></view><!--清除浮动-->
+      <view class="divSearch">
+          <i class="icon fa-search search"></i><input type="text" class="txtSearch" placeholder="输入关键字搜索商品" />
+      </view>
+
+        <!--tab选项卡-->
+        <view class="swiper-tab">  
+            <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">商品</view>  
+            <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">需求</view>  
+            <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">我的</view>  
+        </view>
+  </view>
+   
+
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 80}}px" bindchange="bindChange">  
+        <swiper-item>  
+          <view class="goodsList">
+            <view data-name="{{itemName.title}}" bindtap="goodsDetail" class="goods" wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+              <image class="userimg" src="{{itemName.thumb}}" background-size="cover"></image>
+              <label class="goodsName">{{itemName.title}}</label>
+              <label class="contact"><em class="icon fa-phone"></em><i>{{itemName.phone}}</i></label>
+              <view class="price"><em class="icon fa-rmb"></em><i>{{itemName.price}}</i></view>
+            </view>
+          </view>  
+        </swiper-item>  
+        <swiper-item>  
+          <view class="goodsList">
+            <view data-name="{{itemName.title}}" bindtap="goodsDetail" class="goods" wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+              <image class="userimg" src="{{itemName.thumb}}" background-size="cover"></image>
+              <label class="goodsName">{{itemName.title}}</label>
+              <label class="contact"><em class="icon fa-phone"></em><i>{{itemName.phone}}</i></label>
+              <view class="price"><em class="icon fa-rmb"></em><i>{{itemName.price}}</i></view>
+            </view>
+          </view>  
+        </swiper-item>  
+        <swiper-item>  
+          <view class="goodsList">
+            <view data-name="{{itemName.title}}" bindtap="goodsDetail" class="goods" wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+              <image class="userimg" src="{{itemName.thumb}}" background-size="cover"></image>
+              <label class="goodsName">{{itemName.title}}</label>
+              <label class="contact"><em class="icon fa-phone"></em><i>{{itemName.phone}}</i></label>
+              <view class="price"><em class="icon fa-rmb"></em><i>{{itemName.price}}</i></view>
+            </view>
+          </view>  
+        </swiper-item>  
+    </swiper> 
+</view>

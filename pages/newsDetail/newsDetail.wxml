@@ -1,0 +1,15 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="wrapper">
+  <view class="userinfo">
+    <label bindtap="backPage" class="icon fa-arrow-left arrow"></label>
+    <image bindtap="chooseHead" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <label class="username">欢迎您，{{userInfo.nickName}}</label>
+    <label bindtap="newsPage" class="icon fa-arrow-right arrow"></label>
+  </view>
+   <view class="clear"></view><!--清除浮动-->
+</view>
+<view class="detail">
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:newsDetail}}"/>
+    </view>
+</view>
